@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="pixelstar"
+          fetch="https://github.com/Project-PixelStar"
+          revision="15"  />
+  
+  <!-- GMS -->
+  <remote  name="pixelstar-gitlab"
+          fetch="https://gitlab.com/pixelstar_gms/"
+          revision="15" />
+
+  <!-- Devices (Project-Pixelstar) -->
+  <remote  name="pixelstar-devices"
+          fetch="https://github.com/pixelstar-devices/"
+          revision="15" />
+
+  <!-- General Repos -->
+  <project path="art" name="art" remote="pixelstar" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="pixelstar" />
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="pixelstar" />
+  <project path="development" name="development" remote="pixelstar" />
+  <project path="manifest" name="manifest" remote="pixelstar" />
+  <project path="bionic" name="bionic" remote="pixelstar" />
+
+  <!-- Build Repos -->
+  <project path="build/blueprint" name="build_blueprint" groups="pdk,tradefed" remote="pixelstar" />
+  <project path="build/make" name="build" groups="pdk" remote="pixelstar" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="pixelstar" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- External Repos -->
+  <project path="external/arm-trusted-firmware" name="external_arm-trusted-firmware" remote="pixelstar" />
+  <project path="external/avb" name="external_avb" remote="pixelstar" />
+  <project path="external/cronet" name="external_cronet" remote="pixelstar" />
+  <project path="external/dtc" name="external_dtc" remote="pixelstar" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" remote="pixelstar" />
+  <project path="external/exfatprogs" name="external_exfatprogs" remote="pixelstar" />
+  <project path="external/gptfdisk" name="external_gptfdisk" remote="pixelstar" />
+  <project path="external/libcxx" name="external_libcxx" remote="pixelstar" />
+  <project path="external/libnl" name="external_libnl" remote="pixelstar" />
+  <project path="external/mksh" name="external_mksh" remote="pixelstar" />
+  <project path="external/tinyalsa" name="external_tinyalsa" remote="pixelstar" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="pixelstar" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="pixelstar" />
+  <project path="external/zstd" name="external_zstd" remote="pixelstar" />
+  <project path="external/skia" name="external_skia" remote="pixelstar" />
+  <project path="external/boringssl" name="external_boringssl" remote="pixelstar" />
+  <project path="external/jemalloc_new" name="external_jemalloc_new" remote="pixelstar" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="pixelstar" />
+  <project path="frameworks/base" name="frameworks_base" remote="pixelstar" />
+  <project path="frameworks/native" name="frameworks_native" remote="pixelstar" />
+  <project path="frameworks/opt/calendar" name="frameworks_opt_calendar" remote="pixelstar" />
+  <project path="frameworks/opt/colorpicker" name="frameworks_opt_colorpicker" remote="pixelstar" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="pixelstar" />
+  <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" remote="pixelstar" />
+
+  <!-- GMS -->
+  <project path="vendor/gms" name="vendor_gms" remote="pixelstar-gitlab" revision="15" clone-depth="1" />
+  
+  <!-- Hardware repos -->
+  <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" remote="pixelstar" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="pixelstar" />
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" remote="pixelstar" />
+  <project path="hardware/google/gchips" name="hardware_google_gchips" remote="pixelstar" />
+  <project path="hardware/google/graphics/common" name="hardware_google_graphics_common" remote="pixelstar" />
+  <project path="hardware/google/pixel" name="hardware_google_pixel" remote="pixelstar" />
+  <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" remote="pixelstar" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="pixelstar" />
+  <project path="hardware/ril" name="hardware_ril" remote="pixelstar" />
+  <project path="hardware/samsung/nfc" name="hardware_samsung_nfc" remote="pixelstar" />
+  <project path="hardware/st/nfc" name="hardware_st_nfc" remote="pixelstar" />
+  <project path="hardware/mediatek" name="hardware_mediatek" remote="pixelstar" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="pixelstar" />
+
+  <!-- Packages Repos -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="pixelstar" />
+  <project path="packages/apps/StarField" name="packages_apps_StarField" remote="pixelstar" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="pixelstar" />
+  <project path="packages/overlays/Themes" name="packages_overlays_Themes" remote="pixelstar" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="pixelstar" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="pixelstar" />
+  <project path="packages/apps/Pif" name="packages_apps_Pif" remote="pixelstar" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="pixelstar" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="pixelstar" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk" remote="pixelstar" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="pixelstar" />
+  <project path="packages/apps/Stk" name="packages_apps_Stk" remote="pixelstar" />
+  <project path="packages/modules/adb" name="packages_modules_adb" remote="pixelstar" />
+  <project path="packages/modules/common" name="packages_modules_common" remote="pixelstar" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="pixelstar" />
+  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="pixelstar" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="pixelstar" />
+  <project path="packages/services/DeviceAsWebcam" name="packages_services_DeviceAsWebcam" remote="pixelstar" />
+  <project path="packages/apps/PixelstarWallpaperStub" name="packages_apps_PixelstarWallpaperStub" remote="pixelstar" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="pixelstar" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="pixelstar" />
+  <project path="packages/modules/Virtualization" name="packages_modules_Virtualization" groups="pdk" remote="pixelstar" />
+  <project path="packages/apps/ParanoidGlyph" name="packages_apps_ParanoidGlyph" remote="pixelstar" />
+  <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="pixelstar-gitlab" />
+  <project path="packages/apps/SystemUIFlagFlipper" name="packages_apps_SystemUIFlagFlipper" remote="pixelstar" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="pixelstar" />
+  <project path="packages/apps/BtHelper" name="packages_apps_BtHelper" remote="pixelstar" />
+  <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="pixelstar" />
+  <project path="packages/apps/RepainterServicePriv" name="packages_apps_RepainterServicePriv" remote="pixelstar" />
+
+  <!-- Vendor Repos -->
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="pixelstar" />
+  <project path="vendor/google/interfaces" name="vendor_google_interfaces" remote="pixelstar" />
+  <project path="vendor/google/ThemeIcons" name="vendor_google_ThemeIcons" remote="pixelstar" />
+  <project path="vendor/official_devices" name="official_devices" remote="pixelstar" revision="15"/>
+  <project path="vendor/pixelstar" name="vendor_pixelstar" remote="pixelstar" />
+  <project path="vendor/microsoft/mms" name="vendor_microsoft_mms" remote="pixelstar-gitlab" />
+
+  <!-- Device repos -->
+  <project path="device/pixelstar/sepolicy" name="device_pixelstar_sepolicy" remote="pixelstar" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" revision="15-legacy-um" remote="pixelstar" />
+  <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" revision="15" remote="pixelstar"/>
+
+  <!-- System Repos -->
+  <project path="system/core" name="system_core" remote="pixelstar" />
+  <project path="system/bpf" name="system_bpf" remote="pixelstar" />
+  <project path="system/extras" name="system_extras" remote="pixelstar" />
+  <project path="system/keymaster" name="system_keymaster" remote="pixelstar" />
+  <project path="system/libhidl" name="system_libhidl" remote="pixelstar" />
+  <project path="system/libziparchive" name="system_libziparchive" remote="pixelstar" />
+  <project path="system/logging" name="system_logging" remote="pixelstar" />
+  <project path="system/media" name="system_media" remote="pixelstar" />
+  <project path="system/netd" name="system_netd" remote="pixelstar" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="pixelstar" />
+  <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" remote="pixelstar" />
+  <project path="system/update_engine" name="system_update_engine" remote="pixelstar" />
+  <project path="system/vold" name="system_vold" remote="pixelstar" />
+  <project path="system/security" name="system_security" remote="pixelstar" />
+
+  <!-- External repos (AOSP)-->
+  <project path="external/tinyxml" name="platform/external/tinyxml" remote="aosp" revision="refs/tags/android-11.0.0_r46" />
+
+  <!-- Kernel repos (AOSP) -->
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" groups="pdk" clone-depth="1" remote="aosp" revision="refs/tags/android-14.0.0_r0.99" />
+
+  <include name="snippets/pixelstar-caf.xml"/>
+</manifest>
