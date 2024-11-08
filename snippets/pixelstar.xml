@@ -75,6 +75,7 @@
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="pixelstar" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="pixelstar" />
   <project path="packages/modules/IntentResolver" name="packages_modules_IntentResolver" groups="pdk,sysui-studio" remote="pixelstar" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="pixelstar" />
 
   <!-- External repos -->
   <project path="external/arm-trusted-firmware" name="external_arm-trusted-firmware" remote="pixelstar" />
@@ -111,6 +112,7 @@
 
   <!-- System repos -->
   <project path="system/core" name="system_core" remote="pixelstar" />
+  <project path="system/keymint" name="system_keymint" remote="pixelstar" />
   <project path="system/bpf" name="system_bpf" remote="pixelstar" />
   <project path="system/extras" name="system_extras" remote="pixelstar" />
   <project path="system/keymaster" name="system_keymaster" remote="pixelstar" />
