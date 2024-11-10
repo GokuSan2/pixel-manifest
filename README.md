@@ -31,6 +31,7 @@ mka bacon -jXT
 
 # Credits:
 
+ * [**Android Open Source Project**](https://android.googlesource.com)
  * [**LineageOS**](https://github.com/LineageOS)
  * [**ParanoidAndroid**](https://github.com/AOSPA)
  * [**crDroid**](https://github.com/crdroidandroid)
