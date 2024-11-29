@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+   <remote  name="device"
+           fetch="https://github.com/" />
+
+	<project path="device/xiaomi/sweet" name="GokuSan2/device_xiaomi_sweet" revision="pixel" remote="device" />
+	<project path="vendor/xiaomi/sweet" name="GokuSan2/vendor_xiaomi_sweet" revision="pixel" remote="device" />
+	<project path="device/xiaomi/sm6150-common" name="GokuSan2/device_xiaomi_sm6150-common" revision="pixel" remote="device" />
+    <project path="vendor/xiaomi/sm6150-common" name="GokuSan2/vendor_xiaomi_sm6150-common" revision="pixel" remote="device" />
+	<project path="vendor/xiaomi/sweet-miuicamera" name="PixelOS-Devices/vendor_xiaomi_sweet-miuicamera" revision="fourteen" remote="device" />
+    <project path="device/xiaomi/sm6150" name="unmoved21/kernel_xiaomi_sweet" revision="fourteen" remote="device" clone-depth="1"/>
+
+</manifest>
