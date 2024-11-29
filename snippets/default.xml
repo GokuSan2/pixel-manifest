@@ -13,5 +13,5 @@
   <!-- Track LineageOS repos -->
   <include name="snippets/lineage.xml" />
 
-  <include name="snippets/device.xml"
+  <include name="snippets/device.xml" />
 </manifest>
